@@ -1,0 +1,123 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #E1E5EE;
+    color: #2A324B;
+}
+
+header {
+    background-color: #E1E5EE;
+    color: #fff;
+    text-align: center;
+    padding: 90px;
+    font-size: 24px;
+}
+
+nav {
+    display: flex; 
+    justify-content: center;
+    margin: 0 auto; 
+    max-width: 1200px; 
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    width: 100%; 
+}
+
+nav button {
+    padding: 20px 65px; 
+    color: #fff;
+    background-color: #2A324B;
+    font-size: 20px;
+    white-space: nowrap; 
+    text-align: center; 
+    font-weight: bold;
+    border: none; 
+}
+
+nav button.active {
+    background-color: #fff;
+    color: #2A324B;
+}
+
+nav button:hover {
+    background-color: #fff;
+    color: #2A324B;
+}
+
+main {
+    display: flex;
+    justify-content: flex-start; 
+    background-color: #fff;
+    padding: 50px;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+#resources {
+    width: 100%;
+    max-width: 800px; 
+    margin: 20px 0; 
+    padding: 40px; 
+    text-align: left;
+}
+
+#resources h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #2A324B;
+    font-weight: bold;
+}
+
+#resources p {
+    font-size: 16px;
+    margin: 15px 0;
+    color: #2A324B;
+}
+
+#resources ul {
+    list-style-type: disc;
+    margin-left: 40px;
+}
+
+#resources a {
+    color: #58699D;
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 1200px) {
+    nav ul {
+        gap: 10px; 
+        max-width: 80%;
+    }
+
+    nav button {
+        padding: 15px 40px;
+        font-size: 15px;  
+    }
+
+    main {
+       max-width: 80%;
+    }
+}
+
+@media screen and (max-width: 1020px) {
+    nav ul {
+        flex-direction: column; 
+    }
+
+    nav button {
+        padding: 10px 30px;
+        font-size: 20px;  
+        width: 100%;
+    }
+}
