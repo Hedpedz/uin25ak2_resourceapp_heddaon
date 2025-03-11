@@ -1,24 +1,19 @@
-
-
 import { Link } from "react-router-dom";
+import Nav from "./Nav";
+import PageTitle from "./PageTitle";
+import "../styles/layout.scss";
 
-export default function Layout({ children }) {
+export default function Layout({ children, category }) {
   return (
     <>
       <header>
-        <nav>
-          <Link to="">HTML</Link>
-          <Link to="">CSS</Link>
-          <Link to="">JavaScript</Link>
-          <Link to="">React</Link>
-          <Link to="">Sanity and headless CMS</Link>
-        </nav>
+        <Link to="/" id="logo">Ressursarkiv</Link>
       </header>
-      {children}
-      <footer>
-        <p>Ressursarkiv 2025</p>
-      </footer>
+      <Nav />
+      <main>
+        <PageTitle title={category} />
+        {children}
+      </main>
     </>
   );
 }
-

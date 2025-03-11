@@ -1,35 +1,52 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { Routes, Route, Navigate } from "react-router-dom";
+import Layout from "./components/Layout";
+import Resources from "./components/Resources";
 
-function App() {
-  const [count, setCount] = useState(0)
 
+export default function App() {
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <Routes>
+      <Route path="/" element={<Navigate to="/html" replace />} />
+      <Route
+        path="/html"
+        element={
+          <Layout category="HTML">
+            <Resources category="HTML" />
+          </Layout>
+        }
+      />
+      <Route
+        path="/css"
+        element={
+          <Layout category="CSS">
+            <Resources category="CSS" />
+          </Layout>
+        }
+      />
+      <Route
+        path="/javascript"
+        element={
+          <Layout category="JavaScript">
+            <Resources category="JavaScript" />
+          </Layout>
+        }
+      />
+      <Route
+        path="/react"
+        element={
+          <Layout category="React">
+            <Resources category="React" />
+          </Layout>
+        }
+      />
+      <Route
+        path="/sanity"
+        element={
+          <Layout category="Sanity and headless CMS">
+            <Resources category="Sanity and headless CMS" />
+          </Layout>
+        }
+      />
+    </Routes>
+  );
 }
-
-export default App
