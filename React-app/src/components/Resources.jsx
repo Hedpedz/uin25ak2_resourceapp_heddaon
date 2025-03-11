@@ -1,27 +1,22 @@
 import resources from "../data/ressurser.js";
 
 export default function Resources({ category }) {
-  const resource = resources.find((res) => res.category === category);
+  const filteredResources = resources.filter((res) => res.category === category);
 
-  if (!resource) {
+  if (filteredResources.length === 0) {
     return <section><p>Ingen ressurser funnet for {category}.</p></section>;
   }
 
   return (
     <section>
-      <p>{resource.text}</p>
       <ul>
-        {resource.sources && resource.sources.length > 0 ? (
-          resource.sources.map((source, index) => (
-            <li key={index}>
-              <a href={source.url} target="_blank" rel="noopener noreferrer">
-                {source.title}
-              </a>
-            </li>
-          ))
-        ) : (
-          <li>Ingen kilder tilgjengelig.</li>
-        )}
+        {filteredResources.map((resource, index) => (
+          <li key={index}>
+            <a href={resource.url} target="_blank" rel="noopener noreferrer">
+              {resource.title}
+            </a>
+          </li>
+        ))}
       </ul>
     </section>
   );
