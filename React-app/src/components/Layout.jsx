@@ -5,9 +5,7 @@ import PageTitle from "./PageTitle";
 export default function Layout({ children, category }) {
   return (
     <>
-      <header>
-        
-      </header>
+      <header></header>
       <Nav />
       <main>
         <PageTitle title={category} />

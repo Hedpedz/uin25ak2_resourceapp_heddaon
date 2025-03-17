@@ -73,33 +73,32 @@ main {
   max-width: 1200px;
 }
 
-#resources {
+.resources {
   width: 100%;
   max-width: 800px; 
   margin: 20px 0; 
-  padding: 40px; 
+  padding: 20px; 
   text-align: left;
 }
 
-#resources h2 {
+.resources h2 {
   font-size: 24px;
   margin-bottom: 15px;
   color: #2A324B;
   font-weight: bold;
 }
 
-#resources p {
+.resources p {
   font-size: 16px;
   margin: 15px 0;
   color: #2A324B;
 }
 
-#resources ul {
-  list-style-type: none;
-  margin-left: 40px;
+.resources ul {
+  margin-left: 30px;
 }
 
-#resources a {
+.resources a {
   color: #58699D;
   text-decoration: underline;
 }
