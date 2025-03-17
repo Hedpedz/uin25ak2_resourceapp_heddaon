@@ -1,6 +1,7 @@
 import { Routes, Route, Navigate } from "react-router-dom";
 import Layout from "./components/Layout";
 import Resources from "./components/Resources";
+import "./styles/layout.scss";
 
 export default function App() {
   return (
